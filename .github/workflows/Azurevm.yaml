@@ -25,7 +25,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Terraform Init
-        working-directory: ./terraform-config
+        working-directory: ./Azure-VM
         run: terraform init
 
   terraform-plan: 
@@ -45,7 +45,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Terraform Init
-        working-directory: ./terraform-config
+        working-directory: ./Azure-VM
         run: terraform init
       
       
@@ -70,18 +70,18 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Terraform Init
-        working-directory: ./terraform-config
+        working-directory: ./Azure-VM
         run: terraform init
       
       
       - name: Terraform Plan
-        working-directory: ./terraform-config
+        working-directory: ./Azure-VM
         run: terraform plan
 
       - name: Terraform Apply
-        working-directory: ./terraform-config
+        working-directory: ./Azure-VM
         run: terraform apply -auto-approve
 
       - name: Terraform destroy
-        working-directory: ./terraform-config
+        working-directory: ./Azure-VM
         run: terraform destroy -auto-approve
