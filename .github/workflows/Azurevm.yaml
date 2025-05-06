@@ -50,7 +50,7 @@ jobs:
       
       
       - name: Terraform Plan
-        working-directory: ./terraform-config
+        working-directory: ./Azure-VM
         run: terraform plan
 
   terraform-apply: 
